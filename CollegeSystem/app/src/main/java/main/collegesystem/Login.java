@@ -134,10 +134,13 @@ public class Login extends AppCompatActivity {
                 ParseUser.logInInBackground(nmv, passv, new LogInCallback() {
                     public void done(ParseUser user, ParseException e) {
                         if (user != null) {
+                            //Log.e("Login:", "---User is not null");
                             // Hooray! The user is logged in.
                             pdlg.cancel();
                             String typeuser = user.getString("Type");
                             String sessionToken = user.getSessionToken();
+                            //Log.e("Login:", "---typeuser : " + typeuser);
+                            //Log.e("Login:", "---sessionToken : " + sessionToken);
                             Log.e("Login:", "---Done");
                             SharedPreferences pref = getApplicationContext().getSharedPreferences("Login_state", MODE_PRIVATE);
                             SharedPreferences.Editor editor = pref.edit();

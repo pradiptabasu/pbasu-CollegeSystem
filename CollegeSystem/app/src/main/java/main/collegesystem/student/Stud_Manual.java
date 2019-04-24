@@ -48,6 +48,7 @@ public class Stud_Manual extends AppCompatActivity implements AdapterView.OnItem
     ArrayList<String> sublst=new ArrayList<String>();
     ArrayList<String> explst=new ArrayList<String>();
     ArrayAdapter<String> subexpary,subspinary;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,6 +84,7 @@ public class Stud_Manual extends AppCompatActivity implements AdapterView.OnItem
         subexplst.setOnItemClickListener(this);
 //        showChangeLangDialog("Exp 1 AJP");
     }
+
     public void unsetChannel() {
         List<String> las=ParseInstallation.getCurrentInstallation().getList("channels");
         if(las==null) {
@@ -97,11 +99,13 @@ public class Stud_Manual extends AppCompatActivity implements AdapterView.OnItem
                 }});
         }
     }
+
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.student_menu, menu);//Menu Resource, Menu
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -180,8 +184,10 @@ public class Stud_Manual extends AppCompatActivity implements AdapterView.OnItem
         final CheckBox per=(CheckBox)dialogView.findViewById(R.id.performed);
         final CheckBox checki=(CheckBox)dialogView.findViewById(R.id.checked);
 
-        per.setVisibility(View.INVISIBLE);
-        checki.setVisibility(View.INVISIBLE);
+//        per.setVisibility(View.INVISIBLE);
+//        checki.setVisibility(View.INVISIBLE);
+        per.setVisibility(View.VISIBLE);
+        checki.setVisibility(View.VISIBLE);
 
         final ParseQuery<ParseObject> pselctdexp=ParseQuery.getQuery("Manual");
         pselctdexp.whereEqualTo(selctedsub,selcedexp);

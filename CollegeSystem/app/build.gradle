@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 28
@@ -19,9 +20,18 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs',include: ['*.jar'] )
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.12'
     implementation 'com.android.support:appcompat-v7:28.0.0-rc01'
     implementation 'com.android.support:design:28.0.0'
     implementation 'com.android.support:support-v4:28.0.0'
+
+    // Don't forget to change the lines belows with the latest versions these SDKs
+    implementation "com.github.parse-community.Parse-SDK-Android:fcm:1.18.5"
+    implementation "com.github.parse-community.Parse-SDK-Android:parse:1.18.5"
+    implementation 'com.parse.bolts:bolts-android:1.4.0'
+
+    // Don't forget to change the line below with the latest versions of Firebase SDKs
+    implementation 'com.google.firebase:firebase-core:16.0.8'
+    implementation 'com.google.firebase:firebase-messaging:17.6.0'
 }

@@ -34,7 +34,7 @@ public class About extends AppCompatActivity {
     }
 
     public void aboutankit(View v) {
-        Toast.makeText(About.this, "Devoloper Ankit Khachane", Toast.LENGTH_SHORT).show();
+        Toast.makeText(About.this, "Devoloper Pradipta Basu", Toast.LENGTH_SHORT).show();
     }
 
     @Override

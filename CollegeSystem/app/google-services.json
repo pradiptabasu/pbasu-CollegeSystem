@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "392552945580",
+    "firebase_url": "https://collegesystem-f20da.firebaseio.com",
+    "project_id": "collegesystem-f20da",
+    "storage_bucket": "collegesystem-f20da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:392552945580:android:3fae4cbaf5b4447f",
+        "android_client_info": {
+          "package_name": "main.collegesystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "392552945580-0bt3rc5j3mj8olodvlthc9tqsp3t8nqc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "main.collegesystem",
+            "certificate_hash": "c79e6437b1128e4d495ea9bda0f3d4d04388137a"
+          }
+        },
+        {
+          "client_id": "392552945580-1gbqj1hv0vpsbpegf1fk56sojhakha9m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWqZBU3VQPlckHVyrQMA-CrDsXki0hVtw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "392552945580-1gbqj1hv0vpsbpegf1fk56sojhakha9m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

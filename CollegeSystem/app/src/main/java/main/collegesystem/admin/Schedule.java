@@ -29,6 +29,7 @@ import com.parse.ParseUser;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.HashSet;
 
 import main.collegesystem.About;
 import main.collegesystem.Login;
@@ -64,7 +65,8 @@ public class Schedule extends AppCompatActivity implements AdapterView.OnItemSel
                     for (int i = 0; i < list.size(); i++) {
                         ParseObject u = list.get(i);
                         String nm = u.get("Day").toString();
-                        dayspiner.add(nm);
+                        if(dayspiner.getPosition(nm) <= -1)
+                            dayspiner.add(nm);
                     }
                 }
             }
@@ -104,8 +106,11 @@ public class Schedule extends AppCompatActivity implements AdapterView.OnItemSel
                     if (e == null) {
                         for (int i = 0; i < list.size(); i++) {
                             ParseObject u = list.get(i);
-                            String nm = u.get(selectedDay).toString();
-                            schedlist.add(nm);
+                            if(u.get(selectedDay) != null) {
+                                String nm = u.get(selectedDay).toString();
+                                if(!nm.equalsIgnoreCase(""))
+                                    schedlist.add(nm);
+                            }
                         }
                     }
                 }

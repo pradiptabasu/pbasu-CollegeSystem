@@ -99,7 +99,7 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
         }
     }
 
-    private void doRegister(View view) {
+    public void doRegister(View view) {
         if (isInternetOn()) {
             regnmv = regnm.getText().toString();
             regpassv = regpass.getText().toString();

@@ -18,14 +18,14 @@
         style="@style/CustomButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="24dp"
         android:background="#FFC400"
-        android:text="Ankit Khachane"
+        android:text="Pradipta Basu"
         android:textColor="#536DFE"
         android:textSize="30dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
 </RelativeLayout>

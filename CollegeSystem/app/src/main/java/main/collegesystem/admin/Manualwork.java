@@ -88,8 +88,10 @@ public class Manualwork extends AppCompatActivity implements AdapterView.OnItemS
         expnm.setText(expname);
         final CheckBox per = (CheckBox) dialogView.findViewById(R.id.performed);
         final CheckBox checki = (CheckBox) dialogView.findViewById(R.id.checked);
-        per.setVisibility(View.INVISIBLE);
-        checki.setVisibility(View.INVISIBLE);
+        //per.setVisibility(View.INVISIBLE);
+        //checki.setVisibility(View.INVISIBLE);
+        per.setVisibility(View.VISIBLE);
+        checki.setVisibility(View.VISIBLE);
         final ParseQuery<ParseObject> pselctdexp = ParseQuery.getQuery("Manual");
         pselctdexp.whereEqualTo(selctedsub, selcedexp);
         dialogBuilder.setTitle("Experiment Status");

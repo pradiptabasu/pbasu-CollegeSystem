@@ -182,12 +182,16 @@ public class Stud_Schedule extends AppCompatActivity implements AdapterView.OnIt
                     if (e == null) {
                         for (int i = 0; i < list.size(); i++) {
                             ParseObject u = list.get(i);
-                            String nm = u.get(selectedDay).toString();
-                            schedlist.add(nm);
+                            if(u.get(selectedDay) != null) {
+                                String nm = u.get(selectedDay).toString();
+                                if(!nm.equalsIgnoreCase(""))
+                                    schedlist.add(nm);
+                            }
                         }
                     }
                 }
-            });
+            }
+            );
         }
     }
 

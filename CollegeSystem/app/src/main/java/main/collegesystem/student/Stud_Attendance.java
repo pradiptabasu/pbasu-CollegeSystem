@@ -187,6 +187,7 @@ public class Stud_Attendance extends AppCompatActivity implements AdapterView.On
         tv2.setText("Out Of :");
 
         ParseQuery<ParseObject> p = ParseQuery.getQuery("Attendance");
+        Log.e("Stud_Attendance -- ", "Student Name" + user);
         p.whereEqualTo("student", user);
         p.getFirstInBackground(new GetCallback<ParseObject>() {
             @Override

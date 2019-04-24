@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
 
     <permission
@@ -23,10 +24,10 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.parse.APPLICATION_ID"
-            android:value="pmR0WTHAIAskfpLwTpYWfJ2P2NELHPiwTcuFidv5"/>
+            android:value="ow7TBlBlPg0R16rONG4O7LnM2IIv7ZX3umQ6fdmh"/>
         <meta-data
             android:name="com.parse.CLIENT_KEY"
-            android:value="nR8dSJ8vrZPk8GpffTOgUSb4HDcUfaJvqG3sTb5n"/>
+            android:value="kTDsqMbDK7mHpoUq7nFAOk7Sc01G97sWa5racTMv"/>
 
         <activity
             android:name=".Login"
@@ -48,7 +49,7 @@
 
         <meta-data
             android:name="com.parse.push.gcm_sender_id"
-            android:value="id:943715809680"/>
+            android:value="id:916602821369"/>
         <service android:name="com.parse.PushService"/>
 
         <receiver
@@ -218,6 +219,31 @@
             android:name=".staff.Staff_Defaulter"
             android:label="@string/title_activity_staff__defaulter"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <service
+            android:name="com.parse.fcm.ParseFirebaseInstanceIdService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.parse.fcm.ParseFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.parse.ParsePushBroadcastReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+                <action android:name="com.parse.push.intent.DELETE" />
+            </intent-filter>
+        </receiver>
+
+
     </application>
 
 </manifest>
